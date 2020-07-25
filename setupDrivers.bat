@@ -1,6 +1,5 @@
 @echo off
 
-set TagName=%1
 set chrome_driver_win64=https://chromedriver.storage.googleapis.com/84.0.4147.30/chromedriver_win32.zip
 set gecko_driver_win64=https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-win64.zip
 
@@ -23,15 +22,3 @@ for /R %%I in ("*.zip") do (
 )
 
 echo "Extraction Complete"
-
-echo "Starting project..."
-
-echo "Tag Name"
-echo %TagName%
-
-call mvn clean
-call mvn compile
-call mvn test-compile
-call mvn install -Dcucumber.options="--tags @%TagName%"
-rem call mvn install -Dtomee.properties=cucumber.options="--tags @%TagName%" -Dcucumber.options="--tags @%TagName%"
-rem call mvn install "-Dtomee.properties=cucumber.options=--tags @${TagName}" "-Dcucumber.options=--tags @${TagName}"

@@ -10,17 +10,36 @@ import cucumber.ContextMap;
 import enums.Context;
 import utils.ElementActions;
 
+/**
+ * <p>
+ * Class defining elements and Methods for User's Registration page
+ * </p>
+ * @author Singh
+ *
+ */
 public class UserRegistrationPage extends Page{
 	
-	WebDriver driver;
-	ContextMap brain;
+	public WebDriver driver;
+	public ContextMap brain;
 	
+	/**
+	 * <p>
+	 * Constructor to initialize driver and Scenario context
+	 * </p>
+	 * @param driver driver instance for current scenario
+	 * @param brain Context Map for current Scenario
+	 */
 	public UserRegistrationPage(WebDriver driver, ContextMap brain) {
 		super("register", driver);
 		this.driver = driver;
 		this.brain = brain;
 	}
 	
+	/**
+	 * <p>
+	 * Page Elements
+	 * </p>
+	 */
 	private WebElement firstName;
 	public WebElement firstName(){
 		firstName = driver.findElement(By.xpath("//input[@name = 'firstname']"));
@@ -63,7 +82,11 @@ public class UserRegistrationPage extends Page{
 		return signUpButton;
 	}
 	
-	
+	/**
+	 * <p>
+	 * Fills out the registration form with valid fake data and saves relevant data in Context Map
+	 * </p>
+	 */
 	public void fillRegistrationForm() {
 		Faker faker = new Faker();
 		
@@ -89,6 +112,11 @@ public class UserRegistrationPage extends Page{
 		ElementActions.sendKeys(cnfPassword(), password);
 	}
 	
+	/**
+	 * <p>
+	 * Clicks on the Sign Up button at the end of the registration form
+	 * </p>
+	 */
 	public void clickSignUp() {
 		ElementActions.clickElement(signUpButton());
 	}

@@ -8,17 +8,36 @@ import cucumber.ContextMap;
 import enums.Context;
 import utils.ElementActions;
 
+/**
+ * <p>
+ * Class defining elements and Methods for User's Login page
+ * </p>
+ * @author Singh
+ *
+ */
 public class UserLoginPage extends Page{
 	
-	WebDriver driver;
-	ContextMap brain;
+	public WebDriver driver;
+	public ContextMap brain;
 	
+	/**
+	 * <p>
+	 * Constructor to initialize driver and Scenario context
+	 * </p>
+	 * @param driver driver instance for current scenario
+	 * @param brain Context Map for current Scenario
+	 */
 	public UserLoginPage(WebDriver driver, ContextMap brain) {
 		super("account/logout/", driver);
 		this.driver = driver;
 		this.brain = brain;
 	}
 	
+	/**
+	 * <p>
+	 * Page Elements
+	 * </p>
+	 */
 	private WebElement email;
 	public WebElement email(){
 		email = driver.findElement(By.xpath("//input[@name = 'username']"));
@@ -37,6 +56,9 @@ public class UserLoginPage extends Page{
 		return login;
 	}
 	
+	/**
+	 * Logs in as user that has been registered on the current scenario
+	 */
 	public void loginAsNewlyRegUser() {
 		ElementActions.sendKeys(email(), (String)brain.scenarioContext.getContext(Context.regEmailAddress));
 		ElementActions.sendKeys(password(), (String)brain.scenarioContext.getContext(Context.regPassword));
