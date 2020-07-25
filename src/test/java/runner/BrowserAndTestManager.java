@@ -10,7 +10,7 @@ import utils.Helpers;
 public class BrowserAndTestManager {
 	
 	protected TestNGCucumberRunner testNGCucumberRunner;
-	public static WebDriver driver = null;
+	public static WebDriver driver;
 	
 	public void initialiseBrowserInstance(String browserType) throws Exception {
 		if (Helpers.getOSName().toLowerCase().indexOf("win") >= 0){

@@ -23,7 +23,7 @@ Feature: Test framework for BDD using TestNG and Cucumber
   @test1
   Scenario: Register as a new user
     Given I register as an "endUser"
-    And I login as the registered user
-    When I
+    When I login as the registered user
+    Then I should be able to login 
     
     

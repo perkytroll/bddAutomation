@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="BDD Test Suite" duration-ms="53" started-at="2020-07-24T17:27:33Z" finished-at="2020-07-24T17:27:33Z">
+  <suite name="BDD Test Suite" duration-ms="71" started-at="2020-07-25T10:07:51Z" finished-at="2020-07-25T10:07:51Z">
     <groups>
       <group name="cucumber">
         <method signature="TestRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.TestRunner@553f17c]" name="feature" class="runner.TestRunner"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Test Suite" duration-ms="53" started-at="2020-07-24T17:27:33Z" finished-at="2020-07-24T17:27:33Z">
+    <test name="Test Suite" duration-ms="71" started-at="2020-07-25T10:07:51Z" finished-at="2020-07-25T10:07:51Z">
       <class name="runner.TestRunner">
-        <test-method status="PASS" signature="setUpClass(java.lang.String, java.lang.String)[pri:0, instance:runner.TestRunner@553f17c]" name="setUpClass" is-config="true" duration-ms="10102" started-at="2020-07-24T22:57:23Z" finished-at="2020-07-24T22:57:33Z">
+        <test-method status="PASS" signature="setUpClass(java.lang.String, java.lang.String)[pri:0, instance:runner.TestRunner@553f17c]" name="setUpClass" is-config="true" duration-ms="35997" started-at="2020-07-25T15:37:15Z" finished-at="2020-07-25T15:37:51Z">
           <params>
             <param index="0">
               <value>
@@ -26,34 +26,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="tearDownClass(java.lang.String)[pri:0, instance:runner.TestRunner@553f17c]" name="tearDownClass" is-config="true" duration-ms="0" started-at="2020-07-24T22:57:33Z" finished-at="2020-07-24T22:57:33Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Method tearDownClass requires 1 parameters but 0 were supplied in the @Configuration annotation.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Method tearDownClass requires 1 parameters but 0 were supplied in the @Configuration annotation.
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:198)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:134)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:370)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:86)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:199)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:308)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.TestRunner@553f17c]" name="tearDownClass" is-config="true" duration-ms="698" started-at="2020-07-25T15:37:51Z" finished-at="2020-07-25T15:37:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

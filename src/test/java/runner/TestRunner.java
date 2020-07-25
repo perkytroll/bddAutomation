@@ -21,7 +21,6 @@ public class TestRunner extends BrowserAndTestManager {
 	@Parameters({"browser", "env"})
 	public void setUpClass(String browser, String env) throws Exception {
 		testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
-		System.out.println("BROWSER PROVIDED+++"+browser);
 		initialiseBrowserInstance(browser);
 		setupEnvironment(env);	
 	}
@@ -39,5 +38,6 @@ public class TestRunner extends BrowserAndTestManager {
 	@AfterSuite(alwaysRun = true)
 	public void tearDownClass() throws Exception {
 		testNGCucumberRunner.finish();
+		driver.quit();
 	}
 }
