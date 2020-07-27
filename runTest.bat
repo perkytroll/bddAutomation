@@ -1,3 +1,4 @@
+@echo off
 echo "Starting project..."
 
 set TagName=%1

@@ -1,4 +1,5 @@
 
+  
 # bddAutomation
 Basic E2E UI flow Automation framework using Selenium-Java
 - This framework incorporates TestNG and Cucumber for writing End to End tests.
@@ -8,10 +9,27 @@ Basic E2E UI flow Automation framework using Selenium-Java
 
 ### Pre - Requisites
 Please install the listed versions of software's to avoid any exceptions while executing the Test Suite
+
+>NOTE: This is considering you are working on a 64-bit OS with Eclipse IDE installed and configured beforehand
+
 - **Java** : Version 8
 - **Apache Maven** : Version 3.6.2
 - **Chrome** : Version 84
 - **Firefox** : Version 78
+
+OS Specific Requirements:
+
+
+|OS        |Requirement |Resource         |
+|----------------|----------------------------|--------|
+|MacOS        |Unzip   | ```brew install unzip```|
+|MacOS|   wget | ```brew install wget```|
+|Linux|  Unzip | ```sudo apt-get install unzip```|
+|Linux | wget | ```sudo apt-get install wget```|
+|Windows | cURL | Install Git for Windows|
+
+
+  
 ```bash
  git clone git@github.com:perkytroll/bddAutomation.git
  cd bddAutomation
@@ -38,7 +56,7 @@ Please install the listed versions of software's to avoid any exceptions while e
 |Given            |It specifies the preconditions that should be set before actual test|
 |When|It specifies the actual actions that have to be performed in test |	
 |Then|It is used to assert whether the result of all the actions is as expected|
-- For more info on the significance of Gherkin keywords and other ways to write Scenario's, please refer to [Cucumber Documentation]([https://cucumber.io/docs/gherkin/reference/)
+- For more info on the significance of Gherkin keywords and other ways to write Scenario's, please refer to the [Cucumber Documentation](https://cucumber.io/docs/gherkin/reference/)
 
 #### Glue Code
 ```java
@@ -53,9 +71,20 @@ Please install the listed versions of software's to avoid any exceptions while e
 
 ### Running Scripts
 
-- Setting up drivers for test execution - If on a Windows OS
+- Setting up drivers for test execution 
 
-> ./setupDrivers.bat
-- If on a Linux/MacOS environment
+If on a Windows OS
+
+> setupDrivers.bat
+
+If on a Linux/MacOS
 > ./setupDrivers.sh
 - After the Drivers have been downloaded and extracted, its time to execute the suite
+
+If on a Windows OS
+> runTest.bat test1
+
+Here tagName specifies all the cucumber scenario's with that partiacular tag
+
+If on a Linux/MacOS
+>./runTest.sh tagName
