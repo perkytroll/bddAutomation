@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Beginning driver download and extraction...."
 
 echo "Removing drivers and zip files if they exist...."

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Beginning test execution...."
 
 tagName=$1
