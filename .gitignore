@@ -2,3 +2,6 @@
 *.zip
 *.exe
 /test-output/
+*.tar.gz
+chromedriver
+geckodriver
