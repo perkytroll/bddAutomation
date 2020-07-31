@@ -1,7 +1,7 @@
 
   
 # bddAutomation
-Basic E2E UI flow Automation framework using Selenium-Java
+Basic E2E UI flow Automation framework using Selenium-Java.
 - This framework incorporates TestNG and Cucumber for writing End to End tests.
 - This framework uses TestNG annotations with Cucumber's easy to read Gherkin syntax to write Acceptance tests
 - We can specify tags on Cucumber Scenarios and specify during runtime which Scenarios we want to execute
